@@ -1,0 +1,276 @@
+.App  {
+    background-color: #F6F6F6;
+}
+
+/* container CSS */
+.checkout {
+    max-width: 984px;
+    padding: 0 10px;
+    margin: auto;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* header CSS */
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+    font-size: 14px;
+    grid-column: 1/3;
+}
+
+.head__items {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* parent CSS for two divisions  */
+.checkout__body {
+    margin-top: 33px;
+    display: flex;
+    gap: 24px;
+}
+
+/* main divisions CSS */
+.checkout__part {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.checkout__part--left {
+    max-width: 570px;
+}
+
+.checkout__part--right {
+    max-width: 370px;
+}
+
+/* CSS for forms used */
+.checkout__form {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 30px 18px;
+}
+
+.checkout__forminps--full {
+    grid-column: 1 / 3;
+}
+
+.checkout__formcheck {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    gap: 5px;
+    margin: 10px 0;
+}
+
+.checkout__checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+/* CSS for payment methods checkbox divs */
+.checkout__methods {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.checkout__method {
+    padding: 15px;
+    border: 1px solid #B2BCCA;
+    border-radius: 4px;
+}
+
+.checkout__method__head {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.checkout__method__body {
+    margin-top: 28px;
+}
+
+.checkout__method--checked {
+    background: #e8effa;
+    border: 1px solid #1660CF;
+}
+
+.checkout__method__label {
+    font-weight: 600;
+}
+
+.checkout__method__title {
+    flex-grow: 2;
+    font-size: 14px;
+}
+
+.checkout__method__logos {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+/* CSS for list used in bill details */
+.billlist {
+    list-style-type: none;
+    padding: 0;
+    font-size: 14px;
+}
+
+.billlist__item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.billlist__item--last {
+    color: black;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.billlist__divider {
+    height: 2px;
+    background-color: #E0E0E0;
+    border: 0;
+    margin: 27px 0 18px 0;
+}
+
+.billlist__itemname {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.billlist__itemvalue {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* Universal CSS */
+/* button element CSS with modifiers */
+.btn {
+    padding: 10px 15px;
+    border: 1px solid;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.btn:hover,
+input[type='radio']:hover {
+    cursor: pointer;
+}
+
+.btn--primary {
+    background: linear-gradient(137.27deg, #2F88FF 19.41%, #1D68CD 65.49%);
+    box-shadow: 0px 4px 4px rgba(14, 53, 191, 0.25);
+    border-radius: 6px;
+    color: white;
+    border: none;
+    width: 100%;
+}
+
+.btn--cta {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.btn--link {
+    border: 0;
+    background: none;
+    color: #2F80ED;
+    padding: 0;
+    font-size: 14px;
+}
+
+/* card CSS used for each divin main element */
+.card {
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0px 2px 6px 0px #00000024;
+    background-color: #FFFFFF;
+    position: relative;
+}
+
+.card--drop--close .card__body {
+    display: none;
+}
+
+.card__dropper {
+    position: absolute;
+    top: 18px;
+    right: 12px;
+    color: black;
+}
+
+.card__head {
+    margin: 0;
+    text-align: left;
+}
+
+.card__body {
+    color: #4F4F4F;
+    margin-top: 20px;
+}
+
+.card__summary {
+    font-size: 12px;
+}
+
+.card__footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+.lnk {
+    color: #2F80ED;
+    text-decoration: none;
+}
+
+/* media query for responsiveness */
+@media (width <=650px) {
+    .checkout__body {
+        display: block;
+    }
+
+    .checkout__part {
+        margin: 20px 0;
+        max-width: 100%;
+    }
+}
+
+@media (width<=450px) {
+    .checkout__form {
+        grid-template-columns: auto;
+        gap: 15px;
+    }
+
+    .checkout__forminps--full {
+        grid-column: 1 / 2;
+    }
+}
